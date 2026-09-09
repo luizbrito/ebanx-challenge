@@ -54,11 +54,11 @@ public class AccountController {
      */
     @Operation(summary = "Reset application state")
     @PostMapping("/reset")
-    public ResponseEntity<Void> reset() {
+    public ResponseEntity<String> reset() {
 
         accountService.reset();
 
-        return ResponseEntity.ok().build();
+        return ResponseEntity.ok("OK");
     }
 
     /**

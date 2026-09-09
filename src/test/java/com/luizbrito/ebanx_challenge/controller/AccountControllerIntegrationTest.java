@@ -51,7 +51,8 @@ class AccountControllerIntegrationTest {
     void setUp() throws Exception {
 
         mockMvc.perform(post("/reset"))
-                .andExpect(status().isOk());
+                .andExpect(status().isOk())
+                .andExpect(content().string("OK"));
     }
 
     /**
